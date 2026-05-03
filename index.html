@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive Health Clinic | Dr. Swati Ghonge</title>
+    <meta name="description" content="Expert medical care and comprehensive consultation by Dr. Swati Ghonge (MBBS, MD) at Positive Health Clinic, Pimple Saudagar.">
+    
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.youtube.com">
+    <!-- Changed to a more professional, clinical font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Subtle clinical grid background */
+        .bg-medical-pattern {
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        /* Clean Navbar Shadow */
+        .nav-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+        
+        /* Scroll Reveal Animations (Kept for smooth professional feel) */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal-left { opacity: 0; transform: translateX(-30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal-right { opacity: 0; transform: translateX(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        
+        .reveal.active, .reveal-left.active, .reveal-right.active { opacity: 1; transform: translate(0); }
+        
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 selection:bg-blue-200 overflow-x-hidden">
+
+    <!-- Top Banner (Clinical Blue) -->
+    <div class="bg-blue-900 text-white py-2.5 px-4 text-sm hidden md:block border-b border-blue-950">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-6 text-blue-100">
+                <span class="flex items-center"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1.5 opacity-80"></i> GK Sapphire, Pimple Saudagar</span>
+                <span class="flex items-center"><i data-lucide="clock" class="w-3.5 h-3.5 mr-1.5 opacity-80"></i> Mon-Sat: Morning & Evening</span>
+            </div>
+            <div class="flex items-center font-medium gap-4">
+                <a href="tel:+919021417806" class="flex items-center hover:text-white transition-colors">
+                    <i data-lucide="phone" class="w-3.5 h-3.5 mr-1.5 opacity-80"></i> +91 90214 17806
+                </a>
+                <span class="text-blue-500/50">|</span>
+                <a href="tel:+918484867456" class="flex items-center hover:text-white transition-colors">
+                    +91 84848 67456
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white sticky top-0 z-50 transition-all duration-300 border-b border-slate-200 nav-shadow" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                        <div class="bg-blue-50 p-2.5 rounded-lg text-blue-700 border border-blue-100">
+                            <i data-lucide="cross" class="w-7 h-7"></i>
+                        </div>
+                        <div>
+                            <div class="flex flex-col font-serif text-[#3b4168] leading-none mb-1">
+                                <span class="inline-flex items-center text-[1.35rem] sm:text-2xl lg:text-[1.65rem] font-bold tracking-widest mb-1">POSI<span class="text-[#e02b2b] font-black text-[1.3em] mx-[3px] relative -top-[0.05em]">+</span>IVE</span>
+                                <span class="text-[0.6rem] sm:text-[0.7rem] font-bold tracking-[0.25em] text-[#3b4168]">HEALTH CLINIC</span>
+                            </div>
+                            <p class="text-[0.65rem] sm:text-xs font-medium text-slate-500 mt-1">Dr. Swati Ghonge <span class="text-blue-600 font-semibold mx-1">|</span> MBBS, MD</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-slate-600 hover:text-blue-700 font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-slate-600 hover:text-blue-700 font-medium transition-colors">About</a>
+                    <a href="#videos" class="text-slate-600 hover:text-blue-700 font-medium transition-colors">Videos</a>
+                    <a href="#contact" class="text-slate-600 hover:text-blue-700 font-medium transition-colors">Contact & Hours</a>
+                    <a href="#contact" class="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-300 shadow-sm flex items-center group">
+                        <i data-lucide="calendar" class="w-4.5 h-4.5 mr-2"></i>
+                        Book Appointment
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-blue-700 p-2 bg-slate-50 rounded-lg transition-colors border border-slate-200">
+                        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="mobile-link block px-4 py-3 text-base font-medium text-slate-700 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-colors">Home</a>
+                <a href="#about" class="mobile-link block px-4 py-3 text-base font-medium text-slate-700 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-colors">About</a>
+                <a href="#videos" class="mobile-link block px-4 py-3 text-base font-medium text-slate-700 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-colors">Videos</a>
+                <a href="#contact" class="mobile-link block px-4 py-3 text-base font-medium text-slate-700 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-colors">Contact & Hours</a>
+                <a href="tel:+919021417806" class="mobile-link block px-4 py-3 mt-4 text-center text-base font-semibold text-white bg-blue-700 rounded-lg shadow-sm">Call for Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-slate-50 bg-medical-pattern overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                
+                <!-- Left Text -->
+                <div class="space-y-8 reveal-left">
+                    <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-100/50 border border-blue-200 text-blue-800 font-medium text-sm">
+                        <i data-lucide="shield-check" class="w-4 h-4 mr-2 text-blue-600"></i>
+                        Comprehensive Medical Care
+                    </div>
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Expert Healthcare <br />
+                        <span class="text-blue-700">You Can Trust.</span>
+                    </h2>
+                    <p class="text-base sm:text-lg text-slate-600 max-w-lg leading-relaxed">
+                        Dedicated to providing compassionate, evidence-based healthcare tailored to your needs. Experience professional medical consultation in a secure, clinical environment.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#contact" class="bg-blue-700 text-white px-7 py-3.5 rounded-lg font-semibold text-center hover:bg-blue-800 transition-colors shadow-sm flex justify-center items-center">
+                            Visit Clinic
+                            <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                        </a>
+                        <a href="tel:+919021417806" class="bg-white border border-slate-300 text-slate-700 px-7 py-3.5 rounded-lg font-semibold text-center hover:border-blue-600 hover:text-blue-700 transition-colors flex justify-center items-center shadow-sm">
+                            <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
+                            Call for Appointment
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Visual / Info Card -->
+                <div class="relative reveal-right delay-200 mt-8 md:mt-0">
+                    <div class="bg-white p-6 sm:p-10 rounded-2xl shadow-xl border border-slate-200 relative z-10">
+                        <div class="flex items-center space-x-4 sm:space-x-5 mb-6 sm:mb-8 pb-6 sm:pb-8 border-b border-slate-100">
+                            <div class="h-16 w-16 sm:h-20 sm:w-20 bg-blue-50 rounded-xl flex items-center justify-center text-blue-700 border border-blue-100">
+                                <i data-lucide="activity" class="w-8 h-8 sm:w-10 sm:h-10"></i>
+                            </div>
+                            <div>
+                                <div class="flex flex-col font-serif text-[#3b4168] leading-none mb-2">
+                                    <span class="inline-flex items-center text-xl sm:text-[1.75rem] font-bold tracking-widest mb-1">POSI<span class="text-[#e02b2b] font-black text-[1.3em] mx-[3px] relative -top-[0.05em]">+</span>IVE</span>
+                                    <span class="text-[0.65rem] sm:text-[0.75rem] font-bold tracking-[0.25em] text-[#3b4168]">HEALTH CLINIC</span>
+                                </div>
+                                <p class="text-sm sm:text-base text-blue-900 font-bold mt-2">Dr. Swati Ghonge <span class="text-slate-500 text-xs font-medium ml-1">MBBS, MD</span></p>
+                                <p class="text-[#e02b2b] font-bold text-sm mt-0.5">Family Physician</p>
+                                <p class="text-slate-600 font-medium text-xs mt-0.5">Specialist In Preventive Medicine</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-slate-400 mt-0.5 mr-4">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <p class="text-slate-700 text-sm leading-relaxed font-medium">
+                                    Office No. 209, GK Sapphire, <br/>Opposite Radhika Electronics, <br/>Pimple Saudagar, Pune 411017
+                                </p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="mr-4">
+                                    <i data-lucide="clock" id="live-status-icon" class="w-5 h-5 text-slate-400"></i>
+                                </div>
+                                <p id="live-status-text" class="text-slate-700 text-sm font-medium">
+                                    Checking status...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights/Features -->
+    <section id="about" class="py-20 bg-white relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Why Choose Us?</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="reveal delay-100 bg-slate-50 p-8 rounded-xl border border-slate-200 hover:border-blue-300 transition-colors">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="stethoscope" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">Expert Consultation</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Professional medical advice and accurate diagnosis backed by extensive qualifications (MBBS, MD).</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="reveal delay-200 bg-slate-50 p-8 rounded-xl border border-slate-200 hover:border-blue-300 transition-colors">
+                    <div class="w-12 h-12 bg-red-50 text-[#e02b2b] rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">Comprehensive Care</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Personalized treatment plans focusing on holistic well-being, preventative care, and long-term health management.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="reveal delay-300 bg-slate-50 p-8 rounded-xl border border-slate-200 hover:border-blue-300 transition-colors">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">Trusted Environment</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Experience care in a clean, hygienic, and modern clinical environment located conveniently in Pimple Saudagar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="videos" class="py-20 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 reveal">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Health Information Series</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-600">Watch our curated health awareness videos and clinic resources.</p>
+            </div>
+
+            <!-- YouTube Facade Optimization -->
+            <div class="reveal delay-200 relative rounded-xl overflow-hidden shadow-lg border border-slate-300 bg-slate-900 group">
+                <div class="w-full relative pb-[56.25%] h-0 cursor-pointer" onclick="this.innerHTML='<iframe class=\'absolute top-0 left-0 w-full h-full\' src=\'https://www.youtube.com/embed/f5eF90h4-4s?list=PLRHj0QRt3SpFUH-9y_jk4Ms2i1ScK70Nm&autoplay=1\' title=\'Health Information Video\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
+                    
+                    <!-- High-Resolution Thumbnail -->
+                    <img src="https://img.youtube.com/vi/f5eF90h4-4s/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/f5eF90h4-4s/hqdefault.jpg'" alt="Health Information Video Preview" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    
+                    <!-- Dark Gradient Overlay -->
+                    <div class="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors duration-300"></div>
+                    
+                    <!-- Custom Play Button -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-red-600/90 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(220,38,38,0.4)] group-hover:bg-red-600 group-hover:scale-110 transition-all duration-300 backdrop-blur-sm">
+                            <svg class="w-10 h-10 ml-1.5 fill-current" viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Location & Hours Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Visit Our Clinic</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-600">We are conveniently located in Pimple Saudagar. Check our working hours below to plan your visit.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10">
+                <!-- Left: Contact Info & Map Card -->
+                <div class="reveal-left">
+                    <div class="bg-slate-50 p-8 sm:p-10 rounded-2xl border border-slate-200 h-full">
+                        <h3 class="text-xl font-bold text-slate-900 mb-8 flex items-center">
+                            <i data-lucide="map-pin" class="w-6 h-6 mr-3 text-blue-700"></i>
+                            Clinic Details
+                        </h3>
+                        
+                        <div class="space-y-8">
+                            <div>
+                                <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-2">Address</p>
+                                <p class="text-slate-800 text-lg leading-relaxed font-medium">
+                                    Office No. 209, GK Sapphire,<br />
+                                    Opposite Radhika Electronics,<br />
+                                    Pimple Saudagar, Rahatani,<br />
+                                    Pune, Maharashtra 411017
+                                </p>
+                            </div>
+                            
+                            <div class="pt-6 border-t border-slate-200">
+                                <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-3">Appointments / Phone</p>
+                                <div class="flex flex-col space-y-2">
+                                    <a href="tel:+919021417806" class="inline-flex items-center text-2xl font-bold text-blue-700 hover:text-blue-800 transition-colors">
+                                        +91 90214 17806
+                                    </a>
+                                    <a href="tel:+918484867456" class="inline-flex items-center text-2xl font-bold text-blue-700 hover:text-blue-800 transition-colors">
+                                        +91 84848 67456
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="pt-6 border-t border-slate-200">
+                                <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-2">Email</p>
+                                <a href="mailto:positivehealth.ps@gmail.com" class="inline-flex items-center text-base font-medium text-slate-700 hover:text-blue-700 transition-colors break-all">
+                                    <i data-lucide="mail" class="w-5 h-5 mr-3 text-slate-400"></i>
+                                    positivehealth.ps@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Embedded Google Map -->
+                        <div class="mt-8 rounded-xl overflow-hidden border border-slate-200 h-48 w-full shadow-inner relative z-10 bg-slate-100">
+                            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=GK+Sapphire,+Opposite+Radhika+Electronics,+Pimple+Saudagar,+Pune&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Clinic Location Map"></iframe>
+                        </div>
+
+                        <div class="mt-6 pt-6 border-t border-slate-200">
+                            <a 
+                                href="https://maps.app.goo.gl/xZL2tmJombbZ9ECw5" 
+                                target="_blank" 
+                                rel="noreferrer"
+                                class="w-full inline-flex justify-center items-center bg-slate-800 hover:bg-slate-900 text-white px-6 py-3.5 rounded-lg font-semibold transition-colors"
+                            >
+                                <i data-lucide="navigation" class="w-5 h-5 mr-2"></i>
+                                Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Working Hours Schedule -->
+                <div class="reveal-right delay-200">
+                    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden h-full">
+                        <div class="bg-blue-900 px-8 py-6 text-white flex items-center border-b border-blue-950">
+                            <i data-lucide="clock" class="w-7 h-7 mr-4 text-blue-200"></i>
+                            <div>
+                                <h3 class="text-xl font-bold">Opening Hours</h3>
+                                <p class="text-blue-200 text-sm mt-0.5">Consultation Timings</p>
+                            </div>
+                        </div>
+                        
+                        <div class="px-8 py-4">
+                            <ul class="divide-y divide-slate-100">
+                                <li id="day-0" class="py-4 flex justify-between items-center transition-colors px-2 rounded">
+                                    <span class="font-semibold text-[#e02b2b]">Sunday</span>
+                                    <span class="text-right text-[#e02b2b] font-bold text-sm">Closed</span>
+                                </li>
+                                <li id="day-1" class="py-4 flex justify-between items-center transition-colors px-2 rounded">
+                                    <span class="font-medium text-slate-700">Monday</span>
+                                    <span class="text-right text-slate-600 font-medium">9–10 am, 6–8:30 pm</span>
+                                </li>
+                                <li id="day-2" class="py-4 flex justify-between items-center transition-colors px-2 rounded">
+                                    <span class="font-medium text-slate-700">Tuesday</span>
+                                    <span class="text-right text-slate-600 font-medium">9–10 am, 6–8:30 pm</span>
+                                </li>
+                                <li id="day-3" class="py-4 flex justify-between items-center transition-colors px-2 rounded">
+                                    <span class="font-medium text-slate-700">Wednesday</span>
+                                    <span class="text-right text-slate-600 font-medium">9–10 am, 6–8:30 pm</span>
+                                </li>
+                                <li id="day-4" class="py-4 flex justify-between items-center transition-colors px-2 rounded">
+                                    <span class="font-medium text-slate-700">Thursday</span>
+                                    <span class="text-right text-slate-600 font-medium">9–10 am, 6–8:30 pm</span>
+                                </li>
+                                <li id="day-5" class="py-4 flex justify-between items-center transition-colors px-2 rounded">
+                                    <span class="font-medium text-slate-700">Friday</span>
+                                    <span class="text-right text-slate-600 font-medium">9–10 am, 6–8:30 pm</span>
+                                </li>
+                                <li id="day-6" class="py-4 flex justify-between items-center transition-colors px-2 rounded">
+                                    <span class="font-medium text-slate-700">Saturday</span>
+                                    <span class="text-right text-slate-600 font-medium">9–10 am, 6–8:30 pm</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-slate-50 px-8 py-5 border-t border-slate-100">
+                            <p class="text-sm text-slate-500 font-medium flex items-center justify-center text-center">
+                                <i data-lucide="info" class="w-4 h-4 mr-2 text-blue-600 flex-shrink-0"></i>
+                                Walk-ins welcome, prior appointment preferred.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-12 gap-10 lg:gap-16">
+                <div class="md:col-span-5 reveal">
+                    <div class="flex items-center gap-4 text-white mb-6">
+                        <div class="bg-blue-800 p-2.5 rounded-lg text-blue-100">
+                            <i data-lucide="cross" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex flex-col font-serif text-slate-100 leading-none">
+                            <span class="inline-flex items-center text-[1.5rem] font-bold tracking-widest mb-1">POSI<span class="text-[#e02b2b] font-black text-[1.3em] mx-[3px] relative -top-[0.05em]">+</span>IVE</span>
+                            <span class="text-[0.65rem] font-bold tracking-[0.25em] text-slate-400">HEALTH CLINIC</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 mb-8 max-w-sm leading-relaxed text-sm">
+                        Providing expert medical care and comprehensive consultation services by Dr. Swati Ghonge in Pimple Saudagar, Pune. 
+                    </p>
+                </div>
+                
+                <div class="md:col-span-3 reveal delay-100">
+                    <h3 class="text-white font-semibold mb-6 uppercase text-sm tracking-wider">Quick Links</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#home" class="hover:text-blue-400 transition-colors flex items-center"><i data-lucide="chevron-right" class="w-3.5 h-3.5 mr-2 opacity-50"></i> Home</a></li>
+                        <li><a href="#about" class="hover:text-blue-400 transition-colors flex items-center"><i data-lucide="chevron-right" class="w-3.5 h-3.5 mr-2 opacity-50"></i> About</a></li>
+                        <li><a href="#videos" class="hover:text-blue-400 transition-colors flex items-center"><i data-lucide="chevron-right" class="w-3.5 h-3.5 mr-2 opacity-50"></i> Videos</a></li>
+                        <li><a href="#contact" class="hover:text-blue-400 transition-colors flex items-center"><i data-lucide="chevron-right" class="w-3.5 h-3.5 mr-2 opacity-50"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-4 reveal delay-200">
+                    <h3 class="text-white font-semibold mb-6 uppercase text-sm tracking-wider">Contact Info</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-4 h-4 mt-0.5 mr-3 text-slate-500"></i>
+                            <span class="leading-relaxed">Office No. 209, GK Sapphire, Opposite Radhika Electronics, Pimple Saudagar, Rahatani, Pune, Maharashtra 411017</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="phone" class="w-4 h-4 mt-0.5 mr-3 text-slate-500"></i>
+                            <div class="flex flex-col space-y-1">
+                                <a href="tel:+919021417806" class="hover:text-blue-400 transition-colors">+91 90214 17806</a>
+                                <a href="tel:+918484867456" class="hover:text-blue-400 transition-colors">+91 84848 67456</a>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="mail" class="w-4 h-4 mr-3 text-slate-500"></i>
+                            <a href="mailto:positivehealth.ps@gmail.com" class="hover:text-blue-400 transition-colors">positivehealth.ps@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs font-medium text-slate-500 reveal">
+                <p>&copy; <span id="year"></span> v2ventures. All rights reserved.</p>
+                <p class="mt-2 md:mt-0 italic opacity-80">This is a sample website.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts for Performance & Logic -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Auto-update footer year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if(isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                menuBtn.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+            }
+            lucide.createIcons();
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if(isMenuOpen) toggleMenu();
+            });
+        });
+
+        // Scroll Reveal Animations
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+        
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => revealObserver.observe(el));
+        
+        // Live Clinic Status Logic
+        function updateClinicStatus() {
+            // Get current time in IST (Indian Standard Time)
+            const options = { timeZone: 'Asia/Kolkata', hour12: false, weekday: 'numeric', hour: 'numeric', minute: 'numeric' };
+            const now = new Date(new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"}));
+            
+            const day = now.getDay(); // 0 = Sunday, 1 = Monday...
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const timeInMinutes = hours * 60 + minutes;
+
+            const statusText = document.getElementById('live-status-text');
+            const statusIcon = document.getElementById('live-status-icon');
+
+            // Highlight current day in the table
+            for (let i = 0; i <= 6; i++) {
+                const dayRow = document.getElementById(`day-${i}`);
+                if (dayRow) {
+                    if (i === day) {
+                        dayRow.classList.add('bg-blue-50', 'border-l-4', 'border-blue-600', '-ml-2');
+                    } else {
+                        dayRow.classList.remove('bg-blue-50', 'border-l-4', 'border-blue-600', '-ml-2');
+                    }
+                }
+            }
+
+            if (!statusText || !statusIcon) return;
+
+            // Clinic Timings in minutes from midnight
+            // Morning: 9:00 AM (540) to 10:00 AM (600)
+            // Evening: 6:00 PM (1080) to 8:30 PM (1230)
+            
+            let isOpen = false;
+            let message = "";
+
+            if (day === 0) { // Sunday
+                isOpen = false;
+                message = "Closed Today • Opens Monday at 9:00 AM";
+            } else {
+                if (timeInMinutes >= 540 && timeInMinutes < 600) {
+                    isOpen = true;
+                    message = "Open Now • Closes at 10:00 AM";
+                } else if (timeInMinutes >= 1080 && timeInMinutes < 1230) {
+                    isOpen = true;
+                    message = "Open Now • Closes at 8:30 PM";
+                } else {
+                    isOpen = false;
+                    if (timeInMinutes < 540) {
+                        message = "Closed Now • Opens Today at 9:00 AM";
+                    } else if (timeInMinutes >= 600 && timeInMinutes < 1080) {
+                        message = "Closed Now • Opens Today at 6:00 PM";
+                    } else if (timeInMinutes >= 1230) {
+                        if (day === 6) { // Saturday night
+                            message = "Closed Now • Opens Monday at 9:00 AM";
+                        } else {
+                            message = "Closed Now • Opens Tomorrow at 9:00 AM";
+                        }
+                    }
+                }
+            }
+
+            if (isOpen) {
+                statusText.textContent = message;
+                statusText.className = "text-emerald-600 text-sm font-bold tracking-wide";
+                statusIcon.className = "w-5 h-5 text-emerald-500";
+            } else {
+                statusText.textContent = message;
+                statusText.className = "text-[#e02b2b] text-sm font-bold tracking-wide";
+                statusIcon.className = "w-5 h-5 text-[#e02b2b]";
+            }
+        }
+
+        // Initialize live status
+        updateClinicStatus();
+        
+        // Update status every minute
+        setInterval(updateClinicStatus, 60000);
+    </script>
+</body>
+</html>
